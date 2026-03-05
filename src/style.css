@@ -1,24 +1,27 @@
-body,
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --main-blue: #00a8e1;
 }
 
 body {
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  width: 100%;
 }
 
 header {
-  margin: 0 50px;
+  width: 100%;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -35,16 +38,19 @@ header {
   height: 40px;
 }
 
-.nav {
-  height: 60px;
+.nav_list {
+  margin: 0;
+  padding: 0;
 }
 
 nav ul {
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav_links + .nav_links {
+.nav_list + .nav_list {
   margin-left: 20px;
 }
 
@@ -59,14 +65,15 @@ nav a {
   position: relative;
   white-space: nowrap;
   letter-spacing: 0;
+  padding: 0;
 }
 
 nav a:hover,
-a.is-active {
+nav a.is-active {
   color: var(--main-blue);
 }
 
-a.is-active::after {
+nav a.is-active::after {
   content: '';
   position: absolute;
   left: 0;
@@ -76,6 +83,6 @@ a.is-active::after {
   background-color: var(--main-blue);
 }
 
-.nav-links[data-qa='hover']:hover {
+nav a[data-qa='hover']:hover {
   color: var(--main-blue);
 }
