@@ -20,7 +20,7 @@ body {
   width: 100%;
 }
 
-header {
+.header {
   width: 100%;
   background-color: #fff;
   display: flex;
@@ -38,19 +38,19 @@ header {
   height: 40px;
 }
 
-.nav_list {
+.nav_item {
   margin: 0;
   padding: 0;
 }
 
-nav ul {
+.nav_list {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.nav_list + .nav_list {
+.nav_item + .nav_item {
   margin-left: 20px;
 }
 
@@ -68,12 +68,12 @@ nav a {
   padding: 0;
 }
 
-nav a:hover,
-nav a.is-active {
+.nav_link:hover,
+.nav_link.is-active {
   color: var(--main-blue);
 }
 
-nav a.is-active::after {
+.nav_link.is-active::after {
   content: '';
   position: absolute;
   left: 0;
@@ -83,6 +83,6 @@ nav a.is-active::after {
   background-color: var(--main-blue);
 }
 
-nav a[data-qa='hover']:hover {
+.nav_link[data-qa='hover']:hover {
   color: var(--main-blue);
 }
